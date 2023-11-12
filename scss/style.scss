@@ -49,7 +49,10 @@ nav {
         background-color: rgb(255, 255, 255);
         border-radius: 17px;
         overflow: hidden;
-
+        transition: all 0.2s linear;
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 23px;
+        }
         .card-img {
             display: flex;
             height: 280px;
@@ -61,6 +64,10 @@ nav {
                 margin-bottom: 10px;
                 mix-blend-mode: multiply;
                 margin: auto;
+            }
+            transition: all 0.23s linear;
+            &:hover{
+                transform: scale(1.1);
             }
         }
 
