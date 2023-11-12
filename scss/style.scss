@@ -1,0 +1,175 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap");
+
+$primary: #ed7d31;
+$dark: #000;
+$yellow: rgb(247, 230, 80);
+$text: #2e2c2c;
+
+* {
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(250, 250, 250);
+    word-break: keep-all;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    div img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding: 30px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 290px;
+        height: max-content;
+        margin: 30px auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 17px;
+        overflow: hidden;
+
+        .card-img {
+            display: flex;
+            height: 280px;
+            width: 100%;
+            background-color: rgba(228, 94, 5, 0.158);
+            img {
+                width: auto;
+                height: 250px;
+                margin-bottom: 10px;
+                mix-blend-mode: multiply;
+                margin: auto;
+            }
+        }
+
+        .card-body {
+            padding: 20px;
+
+            h1 {
+                font-size: 23px;
+                font-weight: bolder;
+                cursor: default;
+            }
+
+            .card-info {
+                display: flex;
+                justify-content: space-around;
+                align-items: baseline;
+                font-weight: bold;
+                cursor: default;
+                .rating {
+                    display: inline-flex;
+                    align-items: baseline;
+                    .star {
+                        color: $yellow;
+                        margin-inline: 3px;
+                    }
+                    p {
+                        margin-inline: 6px;
+                    }
+                }
+                .price {
+                    font-size: 21px;
+                    color: green;
+                }
+            }
+
+            .card-description {
+                font-size: 16px;
+                text-align: start;
+                text-indent: 2rem;
+                color: $text;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        height: 34px;
+        background: $dark;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px 2px;
+        margin-block: 6px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            opacity: 0.87;
+        }
+        &:active {
+            scale: 91%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1100px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .card {
+            width: 250px;
+            overflow: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .container .card {
+        width: 230px;
+        overflow: hidden;
+        .card-body {
+            h1 {
+                font-size: 18px;
+            }
+            .card-info {
+                .price {
+                    font-size: 17px;
+                }
+            }
+            .card-description {
+                font-size: 14px;
+            }
+            .btn {
+                font-size: 13px;
+            }
+        }
+    }
+}
