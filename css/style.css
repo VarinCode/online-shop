@@ -53,7 +53,6 @@ nav div img {
   height: 280px;
   width: 100%;
   background-color: rgba(228, 94, 5, 0.158);
-  transition: all 0.23s linear;
 }
 .container .card .card-img img {
   width: auto;
@@ -61,8 +60,9 @@ nav div img {
   margin-bottom: 10px;
   mix-blend-mode: multiply;
   margin: auto;
+  transition: transform 0.23s linear;
 }
-.container .card .card-img:hover {
+.container .card .card-img img:hover {
   transform: scale(1.1);
 }
 .container .card .card-body {
